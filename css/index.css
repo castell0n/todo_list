@@ -25,6 +25,9 @@ main {
 .content_list {
     max-height: 100%;
     overflow: auto;
+    border-radius: 0 0 5px 5px;
+    background: none;
+    padding: 0;
 }
 .header .nueva_nota, .btn_agregar {
     background: var(--background-body);
@@ -71,14 +74,14 @@ main {
     text-align: center;
 }
 .content_list .list {
-    padding: 0 1rem;
     display: flex;
     gap: 0.4rem;
+    padding: 1rem;
     width: 100%;
     justify-content: flex-end;
     flex-direction: column-reverse;
     flex-wrap: wrap;
-    padding-bottom: 10rem;
+    background: aliceblue;
 }
 .content_list .list .item_list {
     background: var(--background-body);
