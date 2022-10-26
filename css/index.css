@@ -124,6 +124,14 @@ main {
 }
 
 
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 550px) { .header { grid-template-columns: 80% 20%; } .header .nueva_nota { grid-column: 1 / 2; grid-row: 2 / 2; } .header .btn_agregar { grid-column: 2 / 3; grid-row: 2 / 2; } }
 
-}
+@media screen and (min-width: 650px) { main { margin: 2rem 4rem; } }
+
+@media screen and (min-width: 850px) { main { margin: 2rem 8rem; } }
+
+@media screen and (min-width: 1024px) { main { margin: 2rem 14rem; } }
+
+@media screen and (min-width: 1250px) { main { margin: 2rem 20rem; } }
+
+@media screen and (min-width: 1400px) { main { margin: 2rem 25rem; } }
