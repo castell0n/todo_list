@@ -13,7 +13,6 @@ body {
 main {
     margin: 1rem;
     height: calc(100vh - 2rem);
-    overflow: hidden;
     border-radius: 5px;
 }
 .header, .content_list {
@@ -24,7 +23,7 @@ main {
 }
 .content_list {
     max-height: 100%;
-    overflow: auto;
+    overflow: hidden;
     border-radius: 0 0 5px 5px;
     background: none;
     padding: 0;
