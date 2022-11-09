@@ -6,101 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo List</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"/>
-    <link rel="stylesheet" href="css/variables.css">
-    <link rel="stylesheet" href="css/index.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class='bg-[#191e21] overflow-hidden'>
 
-    
-    <main>
-        <section id="conten_nuevanota" class="header">
-            <h2 class="header_titulo">Todo List</h2>
-            <input maxlength="60"  type="text" id="nueva_nota" class="nueva_nota" placeholder="Ingresar Tarea">
-            <button onclick="agregarNota()" class="btn_agregar">
-                <i class="bi bi-plus"></i>
-            </button>
+    <div class='spinner fixed w-[100%] h-[100%] flex flex-col items-center justify-center gap-[0.4rem] min-h-screen bg-[#191e21] z-[999]'>
+        <div style="border-top-color:transparent" class="w-8 h-8 border-4 border-[#ffffff] rounded-full animate-spin"></div>
+        <p class="ml-2 text-[#ffffff]">cargando...</p>
+    </div>
+
+    <main class='flex flex-col items-center justify-star p-[1rem] w-[100%] h-[100vh] overflow-auto'>
+        <section id="conten_nuevanota" class='bg-[#ffffff] mb-[0.5rem] w-[18rem] py-[0.8rem] px-[1rem] rounded-[0.4rem] text-center'>
+            <h2 class='text-[#191e21] font-bold'>Todo List</h2>
+
+            <div class='mt-[0.8rem] flex flex-col gap-[0.4rem] items-center justify-between w-[100%] h-auto'>
+                <input maxlength="60"  type="text" id="nueva_nota" placeholder="Ingresar Tarea" class='my-[0.2rem] pb-[0.4rem] py-[0.2rem] px-[1rem] w-[100%] h-[2rem] text-[12px] text-center outline-none rounded-[0.4rem] bg-[transparent] text-[#191e21] focus:bg-[#191e21] focus:text-[#ffffff]'>
+                <button id="btn_agregar" class='my-[0.2rem] bg-[#191e21] text-[#ffffff] w-[100%] h-[2.4rem] text-[20px] text-center rounded-[0.4rem]'>
+                    <i class="bi bi-plus flex items-center justify-center"></i>
+                </button>
+            </div>
             </section>
 
-            <section id="content_list" class="content_list">
-                <div id="list" class="list">
-                    <span id="itemlist" class="item_list">
-                        <h4 id="nota" class="nota">${newNota.value}</h4>
-                        <button id="close" class="close">
-                            <i class="bi bi-x-circle-fill"></i>    
-                        </button>
-                    </span>
-                    <span id="itemlist" class="item_list">
-                        <h4 id="nota" class="nota">${newNota.value}</h4>
-                        <button id="close" class="close">
-                            <i class="bi bi-x-circle-fill"></i>    
-                        </button>
-                    </span>
-                    <span id="itemlist" class="item_list">
-                        <h4 id="nota" class="nota">${newNota.value}</h4>
-                        <button id="close" class="close">
-                            <i class="bi bi-x-circle-fill"></i>    
-                        </button>
-                    </span>
-                    <span id="itemlist" class="item_list">
-                        <h4 id="nota" class="nota">${newNota.value}</h4>
-                        <button id="close" class="close">
-                            <i class="bi bi-x-circle-fill"></i>    
-                        </button>
-                    </span>
-                    <span id="itemlist" class="item_list">
-                        <h4 id="nota" class="nota">${newNota.value}</h4>
-                        <button id="close" class="close">
-                            <i class="bi bi-x-circle-fill"></i>    
-                        </button>
-                    </span>
-                    <span id="itemlist" class="item_list">
-                        <h4 id="nota" class="nota">${newNota.value}</h4>
-                        <button id="close" class="close">
-                            <i class="bi bi-x-circle-fill"></i>    
-                        </button>
-                    </span>
-                    <span id="itemlist" class="item_list">
-                        <h4 id="nota" class="nota">${newNota.value}</h4>
-                        <button id="close" class="close">
-                            <i class="bi bi-x-circle-fill"></i>    
-                        </button>
-                    </span>
-                    <span id="itemlist" class="item_list">
-                        <h4 id="nota" class="nota">${newNota.value}</h4>
-                        <button id="close" class="close">
-                            <i class="bi bi-x-circle-fill"></i>    
-                        </button>
-                    </span>
-                    <span id="itemlist" class="item_list">
-                        <h4 id="nota" class="nota">${newNota.value}</h4>
-                        <button id="close" class="close">
-                            <i class="bi bi-x-circle-fill"></i>    
-                        </button>
-                    </span>
-                    <span id="itemlist" class="item_list">
-                        <h4 id="nota" class="nota">${newNota.value}</h4>
-                        <button id="close" class="close">
-                            <i class="bi bi-x-circle-fill"></i>    
-                        </button>
-                    </span>
-
-                    <span id="itemlist" class="item_list">
-                        <h4 id="nota" class="nota">${newNota.value}</h4>
-                        <button id="close" class="close">
-                            <i class="bi bi-x-circle-fill"></i>    
-                        </button>
-                    </span>
-                    <span id="itemlist" class="item_list">
-                        <h4 id="nota" class="nota">${newNota.value}</h4>
-                        <button id="close" class="close">
-                            <i class="bi bi-x-circle-fill"></i>    
-                        </button>
-                    </span>
-                </div>
+            <section id="content_list" class="flex flex-col items-center justify-star py-[0.9rem] pb-[0.4rem] px-[1rem] text-center w-[18rem] rounded-[0.4rem]">
             </section>
     </main>
 
 
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <!-- <script src="js/autenticacion.js"></script> -->
+    <script src="js/key.js"></script>
     <script src="js/index.js"></script>
 </body>
 </html>
